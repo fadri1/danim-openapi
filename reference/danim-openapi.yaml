@@ -536,16 +536,16 @@ paths:
 components:
   schemas: {}
   securitySchemes:
-    X-App-Id:
-      name: App Id
+    App ID:
+      name: X-App-Id
       type: apiKey
       in: header
-    X-App-Secret:
-      name: App Secret
+    App Secret:
+      name: X-App-Secret
       type: apiKey
       in: header
 tags:
   - name: public
 security:
   - X-App-Id: []
-  - X-App-Secret: []
+  - App Secret: []
