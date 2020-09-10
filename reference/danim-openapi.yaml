@@ -547,5 +547,5 @@ components:
 tags:
   - name: public
 security:
-  - X-App-Id: []
+  - App ID: []
   - App Secret: []
