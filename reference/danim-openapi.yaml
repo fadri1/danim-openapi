@@ -252,10 +252,10 @@ paths:
                 state:
                   type: string
                   enum:
-                    - STATE_DRAFT
-                    - STATE_TO_BE_SENT
-                  default: STATE_TO_BE_SENT
-                  description: 'State of video (e.g. STATE_DRAFT to create a video that will not be generated once created, and that you may generate afterwards via `/write/video/generate`)'
+                    - DRAFT
+                    - TO_BE_SENT
+                  default: TO_BE_SENT
+                  description: 'State of video (e.g. DRAFT to create a video that will not be generated once created, and that you may generate afterwards via `/write/video/generate`)'
               required:
                 - template_id
                 - template_data
