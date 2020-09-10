@@ -160,6 +160,7 @@ paths:
                               - OrganizationInconsistency
                               - PlanIsInsufficientForGeneration
                               - InsufficientCreditsForGeneration
+                              - WorkspaceMustBeSet
                             x-enum-description:
                               FileIsTooLarge: One provided file size is too high
                               FileExtensionTypeIsNotAccepted: 'One provided file extension is not authorized (in general, on the platform)'
@@ -175,6 +176,7 @@ paths:
                               OrganizationInconsistency: When workspace organization does not match with template’s one
                               PlanIsInsufficientForGeneration: The plan is not adapted (e.g. “FREE”)
                               InsufficientCreditsForGeneration: The plan is adapted but no sufficient credits left
+                              WorkspaceMustBeSet: A workspace ID must be provided
                     required:
                       - success
                       - message
