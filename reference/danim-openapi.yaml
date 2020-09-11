@@ -67,7 +67,7 @@ paths:
                       - meta
                 type: object
               examples:
-                'Example #1: basic':
+                '1:success':
                   value:
                     success: true
                     data:
@@ -79,6 +79,12 @@ paths:
                         size: 412941
                         url: 'https://s3.eu-west-3.amazonaws.com/com.danim.prod/app/app/file-store/68147b15-d6ee-4a2c-bfa0-57242c4d2d97.jpeg'
                         path: app/app/file-store/68147b15-d6ee-4a2c-bfa0-57242c4d2d97.jpeg
+                '2:error':
+                  value:
+                    success: false
+                    message: File extension is not authorized
+                    meta:
+                      type: FileExtensionIsNotAccepted
       description: 'This endpoint lets you upload files to our platform, that you may reuse elsewhere using their IDs (e.g. in the `POST` body of another API call).'
       requestBody:
         content:
@@ -92,9 +98,9 @@ paths:
               required:
                 - file
             examples:
-              'Example #1: basic':
+              '1:File sending':
                 value:
-                  file: ...(binary)...
+                  file: binary
         description: ''
       tags:
         - upload
@@ -183,26 +189,19 @@ paths:
                       - meta
                 type: object
               examples:
-                'Example #1: minimalistic':
-                  value:
-                    success: true
-                    data:
-                      id: cad06342-b853-4e19-8bc9-52f6b613a7b0
-                      short_id: jhads673h
-                      name: 'One video #jhads673h'
-                'Example #2: mistake':
-                  value:
-                    success: false
-                    message: The input "B1" is required but has not been provided
-                    meta:
-                      type: MissingTemplateDataInput
-                'Example #3: with a file':
+                '1:success':
                   value:
                     success: true
                     data:
                       id: 80d4139f-1182-4c5b-bd8e-3a00595e08af
                       short_id: fg56h378k
                       name: Alice's video
+                '1:error':
+                  value:
+                    success: false
+                    message: The input "text-3" is required but has not been provided
+                    meta:
+                      type: MissingTemplateDataInput
         '':
           description: ''
       description: 'This endpoint lets you create a video from scratch. You may choose to set it as draft, or directly launch it for generation.'
@@ -220,26 +219,18 @@ paths:
                   description: 'Template data for generation (_id/value pairs: see examples [below](#_write_video_create_examples)). If there’s no file (URL, ID, bin, etc.) in your data, you can provide a JSON-encoded string.'
                 description:
                   default: null
-                  type:
-                    - string
-                    - 'null'
+                  type: string
                   description: Description of the video
                 name:
-                  type:
-                    - string
-                    - 'null'
+                  type: string
                   default: 'Generated (template name + ‘ #’ + short ID)'
                   description: Name of the video
                 workspace_id:
-                  type:
-                    - string
-                    - 'null'
+                  type: string
                   default: Will be the first of template’s organization (if it exists)
                   description: Workspace in which the video should be created
                 callback_url:
-                  type:
-                    - string
-                    - 'null'
+                  type: string
                   description: |-
                     This webhook URL will be sollicitated on video generation success.
                     It will by default use `POST` method, and provide the following parameters:
@@ -260,24 +251,13 @@ paths:
                 - template_id
                 - template_data
             examples:
-              'Example #1: minimalistic':
+              '1:Create a video':
                 value:
                   template_id: 967702d6-eb8a-4734-a398-4f3c10359d95
                   template_data:
-                    A1: Bob's select value
-              'Example #2: mistake':
-                value:
-                  template_id: 967702d6-eb8a-4734-a398-4f3c10359d95
-                  template_data:
-                    A1: Bob's select value
-                    B3: Bob's text value
-              'Example #3: with a file':
-                value:
-                  template_id: 967702d6-eb8a-4734-a398-4f3c10359d95
-                  template_data:
-                    A1: Alice's select value
-                    B1: Alice's text value
-                    B2: www-xxx-yyy-zzz
+                    text-1: Alice's select value
+                    text-2: Alice's text value
+                    image-1: www-xxx-yyy-zzz
                   name: Alice's video
                   description: 'Hi everyone, this video has an image! Alice.'
         description: ''
@@ -327,11 +307,11 @@ paths:
                       - meta
                 type: object
               examples:
-                'Example #1: minimalistic':
+                '1:success':
                   value:
                     success: true
                     data: {}
-                'Example #2: inexistent video':
+                '2:error':
                   value:
                     success: false
                     message: Video with ID 337845a4-7f40-4acd-a662-dfac378126c3 cannot be found.
@@ -363,17 +343,12 @@ paths:
                 - video_id
                 - patch
             examples:
-              'Example #1: minimalistic':
+              '1:Edit video name and description':
                 value:
                   video_id: 607e5f57-6e4f-4d28-bd81-377bb1a40de1
                   patch:
                     name: Wonderful house
                     description: This video shows the rooms...
-              'Example #2: inexistent video':
-                value:
-                  video_id: 337845a4-7f40-4acd-a662-dfac378126c3
-                  patch:
-                    name: Candidates
         description: ''
     parameters: []
   /write/video/remove:
@@ -421,11 +396,11 @@ paths:
                       - meta
                 type: object
               examples:
-                'Example #1: basic':
+                '1:success':
                   value:
                     success: true
                     data: {}
-                'Example #2: inexistent video':
+                '1:error':
                   value:
                     success: false
                     message: Video with ID 337845a4-7f40-4acd-a662-dfac378126c3 cannot be found.
@@ -447,12 +422,9 @@ paths:
               required:
                 - video_id
             examples:
-              'Example #1: basic':
+              '1:Remove':
                 value:
                   video_id: 607e5f57-6e4f-4d28-bd81-377bb1a40de1
-              'Example #2: inexistent video':
-                value:
-                  video_id: 337845a4-7f40-4acd-a662-dfac378126c3
   /write/video/generate:
     post:
       summary: Generate a video
@@ -501,11 +473,11 @@ paths:
                       - meta
                 type: object
               examples:
-                'Example #1: basic':
+                '1:success':
                   value:
                     success: true
                     data: {}
-                'Example #2: insufficient plan':
+                '1:error':
                   value:
                     success: false
                     message: 'Video cost is 8 credits, 6 ones in the organization is therefore insufficient'
@@ -525,14 +497,9 @@ paths:
               required:
                 - video_id
             examples:
-              'Example #1: basic':
-                value:
-                  video_id: 607e5f57-6e4f-4d28-bd81-377bb1a40de1
-              'Example #2: insufficient plan':
+              '1:Generate':
                 value:
                   video_id: 337845a4-7f40-4acd-a662-dfac378126c3
-                  patch:
-                    name: Candidates
 components:
   schemas: {}
   securitySchemes:
