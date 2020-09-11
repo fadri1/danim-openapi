@@ -100,10 +100,8 @@ paths:
                 - file
             examples:
               '1:File sending':
-                value: |-
-                  {
-                    "file": ""
-                  }
+                value:
+                    "file: ""
         description: ''
       tags:
         - upload
