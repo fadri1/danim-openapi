@@ -108,7 +108,7 @@ paths:
                         size: 412941
                         url: 'https://s3.eu-west-3.amazonaws.com/com.danim.prod/app/app/file-store/68147b15-d6ee-4a2c-bfa0-57242c4d2d97.jpeg'
                         path: app/app/file-store/68147b15-d6ee-4a2c-bfa0-57242c4d2d97.jpeg
-                '2:error':
+                '1:error':
                   value:
                     success: false
                     message: File extension is not authorized
@@ -130,7 +130,7 @@ paths:
             examples:
               '1:File sending':
                 value:
-                  file: ""
+                  file: ''
         description: ''
       tags:
         - upload
@@ -339,7 +339,7 @@ paths:
                   value:
                     success: true
                     data: {}
-                '2:error':
+                '1:error':
                   value:
                     success: false
                     message: Video with ID 337845a4-7f40-4acd-a662-dfac378126c3 cannot be found.
