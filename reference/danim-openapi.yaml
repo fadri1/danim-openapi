@@ -98,7 +98,6 @@ paths:
         description: ''
       tags:
         - upload
-        - public
   /write/video/create:
     post:
       summary: Create a video
@@ -283,7 +282,6 @@ paths:
                   description: 'Hi everyone, this video has an image! Alice.'
         description: ''
       tags:
-        - public
         - video
     parameters: []
   /write/video/change:
@@ -340,7 +338,6 @@ paths:
                     meta:
                       type: VideoNotFound
       tags:
-        - public
         - video
       description: 'This endpoint lets you change your video: name, description, etc.'
       requestBody:
@@ -437,7 +434,6 @@ paths:
       description: This endpoint lets you remove one of your videos.
       parameters: []
       tags:
-        - public
         - video
       requestBody:
         content:
@@ -461,7 +457,6 @@ paths:
     post:
       summary: Generate a video
       tags:
-        - public
         - video
       responses:
         '200':
@@ -550,7 +545,6 @@ components:
       type: apiKey
       in: header
 tags:
-  - name: public
   - name: upload
   - name: video
 security:
