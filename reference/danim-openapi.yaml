@@ -281,7 +281,7 @@ paths:
                         type: boolean
                       data:
                         type: object
-                        properties: null
+                        properties:
                     required:
                       - success
                   - description: error
