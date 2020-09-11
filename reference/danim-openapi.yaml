@@ -102,7 +102,7 @@ paths:
               '1:File sending':
                 value: |-
                   {
-                    "file": "binary"
+                    "file": ""
                   }
         description: ''
       tags:
