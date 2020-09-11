@@ -95,12 +95,15 @@ paths:
                 file:
                   type: string
                   description: The file content
+                  format: binary
               required:
                 - file
             examples:
               '1:File sending':
-                value:
-                  file: binary
+                value: |-
+                  {
+                    "file": "binary"
+                  }
         description: ''
       tags:
         - upload
