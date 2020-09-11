@@ -3,7 +3,7 @@ info:
   title: Danim API
   version: '1.0'
   description: |-
-    From the generation of personalized videos for your users and clients to the large-scale marketing campaign, Danim has been designed to open the door to your creativity.
+    From generation of personalized videos for your users and clients to the large-scale marketing campaign, Danim has been designed to open the door to your creativity.
     The Danim API is an interface for reading and writing data from and to client online accounts, organizations that holds them, videos having been or being generated, and so on.
   contact:
     name: Danim Support
