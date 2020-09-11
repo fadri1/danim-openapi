@@ -1,6 +1,5 @@
 title: File
 type: object
-x-examples: {}
 properties:
   id:
     type: string
