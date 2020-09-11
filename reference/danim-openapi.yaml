@@ -109,7 +109,7 @@ paths:
       summary: Create a video
       operationId: post-write-video-create
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -202,8 +202,6 @@ paths:
                     message: The input "text-3" is required but has not been provided
                     meta:
                       type: MissingTemplateDataInput
-        '':
-          description: ''
       description: 'This endpoint lets you create a video from scratch. You may choose to set it as draft, or directly launch it for generation.'
       requestBody:
         content:
