@@ -97,6 +97,7 @@ paths:
                   file: ...(binary)...
         description: ''
       tags:
+        - upload
         - public
   /write/video/create:
     post:
@@ -283,6 +284,7 @@ paths:
         description: ''
       tags:
         - public
+        - video
     parameters: []
   /write/video/change:
     post:
@@ -339,6 +341,7 @@ paths:
                       type: VideoNotFound
       tags:
         - public
+        - video
       description: 'This endpoint lets you change your video: name, description, etc.'
       requestBody:
         content:
@@ -435,6 +438,7 @@ paths:
       parameters: []
       tags:
         - public
+        - video
       requestBody:
         content:
           application/json:
@@ -458,6 +462,7 @@ paths:
       summary: Generate a video
       tags:
         - public
+        - video
       responses:
         '200':
           description: ''
@@ -546,6 +551,8 @@ components:
       in: header
 tags:
   - name: public
+  - name: upload
+  - name: video
 security:
   - App ID: []
   - App Secret: []
