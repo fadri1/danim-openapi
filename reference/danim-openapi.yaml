@@ -101,7 +101,7 @@ paths:
             examples:
               '1:File sending':
                 value:
-                   "file: ""
+                    file: ""
         description: ''
       tags:
         - upload
