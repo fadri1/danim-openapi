@@ -34,6 +34,7 @@ paths:
                           - file
                         properties:
                           file:
+                            type: object
                             properties:
                               id:
                                 type: string
