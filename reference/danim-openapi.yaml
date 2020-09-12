@@ -360,8 +360,6 @@ paths:
                 patch:
                   type: object
                   description: This is an object holding all the wished changes
-                  required:
-                    - name
                   properties:
                     name:
                       type: string
