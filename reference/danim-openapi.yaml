@@ -129,10 +129,8 @@ paths:
                 - file
             examples:
               '1:File sending':
-                value: |-
-                  {
-                    "file": "BINARY"
-                  }
+                value:
+                  file: "BINARY"
         description: ''
       tags:
         - upload
