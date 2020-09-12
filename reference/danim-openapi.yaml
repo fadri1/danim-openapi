@@ -246,7 +246,7 @@ paths:
                   type: object
                   description: 'Template data for generation (_id/value pairs: see examples [below](#_write_video_create_examples)). If there’s no file (URL, ID, bin, etc.) in your data, you can provide a JSON-encoded string.'
                 description:
-                  default: null
+                  default: 'null'
                   type: string
                   description: Description of the video
                 name:
