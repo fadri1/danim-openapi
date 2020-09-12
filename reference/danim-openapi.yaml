@@ -244,7 +244,7 @@ paths:
                   description: ID of template from which the video must be generated
                 template_data:
                   type: object
-                  description: 'Template data for generation (_id/value pairs: see examples [below](#_write_video_create_examples)). If there’s no file (URL, ID, bin, etc.) in your data, you can provide a JSON-encoded string.'
+                  description: 'Template data for generation (_id/value pairs: [see our guide](#https://docs.danim.com/api#read-a-template-and-create-a-video)). If there’s no file (URL, ID, bin, etc.) in your data, you can provide a JSON-encoded string.'
                 description:
                   default: 'null'
                   type: string
