@@ -215,6 +215,7 @@ paths:
                               PlanIsInsufficientForGeneration: The plan is not adapted (e.g. “FREE”)
                               InsufficientCreditsForGeneration: The plan is adapted but no sufficient credits left
                               WorkspaceMustBeSet: A workspace ID must be provided
+                              BadParameter: One given parameter in the template data cannot be accepted as it is
                     required:
                       - success
                       - message
