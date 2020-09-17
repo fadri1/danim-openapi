@@ -131,7 +131,7 @@ paths:
             examples:
               '1:File sending':
                 value:
-                  file: "BINARY"
+                  file: BINARY
         description: ''
       tags:
         - upload
@@ -198,6 +198,7 @@ paths:
                               - PlanIsInsufficientForGeneration
                               - InsufficientCreditsForGeneration
                               - WorkspaceMustBeSet
+                              - BadParameter
                             x-enum-description:
                               FileIsTooLarge: One provided file size is too high
                               FileExtensionTypeIsNotAccepted: 'One provided file extension is not authorized (in general, on the platform)'
