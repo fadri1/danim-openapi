@@ -215,7 +215,7 @@ paths:
                               OrganizationInconsistency: When workspace organization does not match with template’s one
                               PlanIsInsufficientForGeneration: The plan is not adapted (e.g. “FREE”)
                               InsufficientCreditsForGeneration: The plan is adapted but no sufficient credits left
-                              PlanIsExpired: The plan no longer exists at it did
+                              PlanIsExpired: The plan no longer exists as it did
                               WorkspaceMustBeSet: A workspace ID must be provided
                               BadParameter: One given parameter in the template data cannot be accepted as it is
                     required:
