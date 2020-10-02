@@ -260,7 +260,7 @@ paths:
                   description: Name of the video
                 workspace_id:
                   type: string
-                  default: Will be the first of template’s organization (if it exists)
+                  default: Will be the one of the template (if it exists), or the first of its organizations ones otherwise
                   description: Workspace in which the video should be created
                 callback_url:
                   type: string
