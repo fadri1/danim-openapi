@@ -266,7 +266,7 @@ paths:
                   type: string
                   description: |-
                     This webhook URL will be sollicitated on video generation success.
-                    It will by default use `POST` method (Content-Type being `application/x-www-form-urlencoded`), and provide the following parameters:
+                    It will by default use `POST` method (`Content-Type` being `application/x-www-form-urlencoded`), and provide the following parameters:
                     * `id` (video ID)
                     * `raw_url` (video cloud raw URL)
                     * `raw_thumbnail_url` (video thumbnail cloud raw URL)
