@@ -266,9 +266,10 @@ paths:
                   type: string
                   description: |-
                     This webhook URL will be sollicitated on video generation success.
-                    It will by default use `POST` method, and provide the following parameters:
+                    It will by default use `POST` method (`application/x-www-form-urlencoded` or `multipart/form-data` if files are added soon, but never `application/json`), and provide the following parameters:
                     * `id` (video ID)
                     * `raw_url` (video cloud raw URL)
+                    * `raw_thumbnail_url` (video thumbnail cloud raw URL)
                     * `player_url` (link for video play - e.g. iframe).
 
                     If you prefer to get this stuff done via the `GET` method, just add `+get` in your url scheme (e.g. `https+get://my.app/webhook/1`)
