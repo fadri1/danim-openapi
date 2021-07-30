@@ -260,7 +260,7 @@ paths:
                   description: Name of the video
                 workspace_id:
                   type: string
-                  default: Will be the one of the template (if it exists), or the first of its organizations ones otherwise
+                  default: 'Will be the one of the template (if it exists), or the first of its organizations ones otherwise'
                   description: Workspace in which the video should be created
                 callback_url:
                   type: string
@@ -278,8 +278,8 @@ paths:
                   type: string
                   enum:
                     - DRAFT
-                    - TO_BE_SENT
-                  default: TO_BE_SENT
+                    - PENDING_IN_APP
+                  default: PENDING_IN_APP
                   description: 'State of video (e.g. DRAFT to create a video that will not be generated once created, and that you may generate afterwards via `/write/video/generate`)'
               required:
                 - template_id
