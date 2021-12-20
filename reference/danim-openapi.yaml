@@ -251,7 +251,7 @@ paths:
                   type: object
                   description: 'Template data for generation (id/value pairs: [see our guide](https://docs.danim.com/api#read-a-template-and-create-a-video)). If there’s no file (URL, ID, bin, etc.) in your data, you can provide a JSON-encoded string.'
                 description:
-                  default: 'null'
+                  default: null
                   type: string
                   description: Description of the video
                 name:
@@ -268,12 +268,13 @@ paths:
                     This webhook URL will be sollicitated on video generation success.
                     It will by default use `POST` method (`Content-Type` being `application/x-www-form-urlencoded`), and provide the following parameters:
                     * `id` (video ID)
-                    * `raw_url` (video cloud raw URL)
-                    * `raw_thumbnail_url` (video thumbnail cloud raw URL)
-                    * `player_url` (link for video play - e.g. iframe).
+                    * `raw_url` (full resolution video URL)
+                    * `raw_quicklook_url` (GIF preview URL)
+                    * `raw_thumbnail_url` (main thumbnail URL)
+                    * `player_url` (video player URL).
 
                     If you prefer to get this stuff done via the `GET` method, just add `+get` in your url scheme (e.g. `https+get://my.app/webhook/1`)
-                  default: 'null'
+                  default: null
                 state:
                   type: string
                   enum:
